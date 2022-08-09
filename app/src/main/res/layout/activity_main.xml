@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Masukkan Angka Pertama"
+        app:layout_constraintBottom_toTopOf="@+id/input1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Masukkan Angka Pertama"
+        app:layout_constraintBottom_toTopOf="@+id/input2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input1"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="376dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="379dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btTambah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btHitung"
+        android:layout_width="378dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:text="HITUNG"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btTambah" />
+
+    <Button
+        android:id="@+id/btTambah"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btHitung"
+        app:layout_constraintEnd_toStartOf="@+id/btKurang"
+        app:layout_constraintStart_toEndOf="@+id/btBagi"
+        app:layout_constraintTop_toBottomOf="@+id/input2"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <Button
+        android:id="@+id/btBagi"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="24dp"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/btHitung"
+        app:layout_constraintEnd_toStartOf="@+id/btTambah"
+        app:layout_constraintStart_toEndOf="@+id/btKali"
+        app:layout_constraintTop_toBottomOf="@+id/input2"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <Button
+        android:id="@+id/btKurang"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="24dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btHitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btTambah"
+        app:layout_constraintTop_toBottomOf="@+id/input2"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <Button
+        android:id="@+id/btKali"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/btHitung"
+        app:layout_constraintEnd_toStartOf="@+id/btBagi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input2"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Hasil"
+        app:layout_constraintBottom_toTopOf="@+id/hasil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btHitung"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <EditText
+        android:id="@+id/hasil"
+        android:layout_width="370dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="272dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
